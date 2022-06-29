@@ -12,6 +12,8 @@
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
+<!-- js -->
+<script defer src="script.js"></script>
 </head>
 <body>
     <!-- nav menu -->
@@ -214,10 +216,10 @@
                     </div>
                     <div>
                         <!-- <label for="emailAddress">Your Email address</label> -->
-                        <input type="email" class="form-control" id="emailAddress" placeholder="yourname@example.com">
+                        <input type="email" class="form-control" id="emailAddress" placeholder="yourname@example.com" req>
                     </div>
-                    <div>
-                        <select class="custom-select form-control">
+                    <div>   
+                        <select class="custom-select form-control" id="Country">
                             <option selected>Country</option>
                             <option value="1">India</option>
                             <option value="2">USA</option>
@@ -225,7 +227,7 @@
                           </select>
                     </div>
                     <div>
-                        <select class="custom-select form-control">
+                        <select class="custom-select form-control" id="Language">
                             <option selected>Language</option>
                             <option value="1">English</option>
                             <option value="2">Deutsch</option>
@@ -251,9 +253,9 @@
                     </div>
                     <div>
                         <input type="checkbox" checked="checked">
-                        <span class="checkmark">I’m okay with Mozilla handling my info as explained in this Privacy Notice</span>
+                        <span class="checkmark">I'm okay with Mozilla handling my info as explained in this Privacy Notice</span>
                     </div>
-                    <div><button type="button" class="form-control formBtn ">Sign Up Now</button></div>
+                    <div><button type="submit" id="signUp-form" class="formBtn ">Sign Up Now</button></div>
                     <!-- <button type="button" class="form-control formBtn " data-bs-toggle="collapse" data-bs-target="#signUpMenu">Sign Up Now</button>
                     <div id="signUpMenu" > -->
                     
@@ -266,6 +268,7 @@
         
     </div>
 </section>
+<div id="Error"></div>
 <!-- 8th privacy over profit -->
 <section class="text-light px-sm-5 text-center  text-sm-start pt-sm-5 pb-sm-5 pt-0 p8-background">
 
@@ -327,25 +330,55 @@
                 </ul>
             </div>
             <div>
-                <table>
-                    <td>
-                         <tr>Follow @Mozilla</tr>
-                         <tr></tr>
-                    </td>
-                    <td>
-                        <tr>
+                <div class="socialFlex">
+            
+                         <div>Follow @Mozilla
+                         <ul class="mzp-c-footer-links-social footersocial">
+                            <li><a class="twitter" href="https://twitter.com/mozilla"><img class="socialLinks" src="img/ico/twittwr2.png"></a></li>
+                            <li><a class="twitter" href="https://instagram.com/mozilla/"><img class="socialLinks" src="img/ico/insta black.png"></a></li>
+                            <li><a class="twitter" href="https://youtube.com/mozilla"><img class="socialLinks" src="img/ico/youtube black.png"></a></li>
+                            <li><a class="twitter" href="https://spotify.com/mozilla"><img class="socialLinks" src="img/ico/spotify.png"></a></li>
+                            <li><a class="twitter" href="https://tiktok.com/mozilla"><img class="socialLinks" src="img/ico/tiktok.png"></a></li>                           
+                          </ul></div>
+
+                        <div>
                             Follow @Firefox
-                        </tr>
-                       </td>
-                </table>
+                            <ul class="mzp-c-footer-links-social footersocial">
+                                <li><a class="twitter" href="https://twitter.com/mozilla"><img class="socialLinks" src="img/ico/twittwr2.png"></a></li>
+                                <li><a class="twitter" href="https://instagram.com/mozilla/"><img class="socialLinks" src="img/ico/insta black.png"></a></li>
+                                <li><a class="twitter" href="https://youtube.com/mozilla"><img class="socialLinks" src="img/ico/youtube black.png"></a></li>
+                          
+                              </ul>
+                        </div>
+                       
             </div>
         </div>
     </div>
-    
+    <hr style="color: #ffffff;">
+    <div class="container footerline">
+        <div class="footer-footerGrid">
+            <div class="a">Website Privacy Notice</div>
+            <div class="b">Cookies</div>
+            <div class="c">Legal</div>
+            <div class="d"> Community Participation Guidelines</div>
+            <div class="e">Visit Mozilla Corporation’s not-for-profit parent, the Mozilla Foundation.
+                Portions of this content are ©1998–2022 by individual mozilla.org contributors. Content available under a Creative Commons license.</div>
+            <div class="LanguageSelect"><Label>Language</Label>
+                <select class="custom-select form-control" id="Language">
+                    <option selected>English</option>
+                    <option value="1">Malayalam</option>
+                    <option value="2">hindi</option>
+                    <option value="3">Darkfox</option>
+                  </select>
+            </div>
+        </div>
+    </div>
 </footer>
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    const body =document.body;
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script>
+ const body =document.body;
     let lastScroll =0;
      window.addEventListener("scroll",()=>{
         const currentScroll = window.pageYOffset
@@ -363,6 +396,20 @@
      }
      lastScroll=currentScroll;
      })
+</script>
+<script>
+    $(document).ready(function(){
+      $("#signUp-form").validate({ 
+        rules:{
+            fname : {
+            requied:true, 
+            minlength:4
+        }
+        }
+       
+      })
+      
+      } )
 </script>
 </body>
 </html>

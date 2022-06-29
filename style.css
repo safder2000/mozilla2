@@ -219,6 +219,76 @@ list-style: none;
 .formLabel{
     align-self: flex-end;
 }
+.socialLinks{
+    filter: invert(100%);
+    width: 22px;
+}
+.footersocial {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+table {
+    border-collapse: separate;
+    border-spacing: 2 rem;
+}
+.socialFlex{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 3rem;
+    font-size: 15px;
+}
+@media(max-width:768px){
+    .socialFlex{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(15rem,1fr));
+        gap: 5rem;  
+        font-size: 13px;
+    }
+}
+.footerline{
+    border-top: 10px;
+    border-color: aliceblue;
+    font-size:13px;
+}
+.footer-footerGrid{
+    display: grid;
+    grid-template-columns: minmax(200px,2fr)  minmax(100px,1fr)  minmax(100px,1fr)  minmax(300px,3fr) minmax(200px,3fr)  6fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:"txt1 txt2 txt3 txt4 spc1 spc lng"
+                        "txt5 txt5 txt5 txt5 txt5 spc lng";
+                        color: aliceblue;
+}
+.a{
+    height: 60px;
+    width: 100%;
+    grid-area: txt1;
+    
+}
+.b{
+    height: 60px;
+    width: 100%;
+    grid-area: txt2;
+}
+.c{
+    height: 60px;
+    width: 100%;
+    grid-area: txt3;
+}
+.d{
+    height: 60px;
+    width: 100%;
+    grid-area: txt4;
+}
+.e{
+    height: 60px;
+    width: 100%;
+    grid-area: txt5;
+}
+.LanguageSelect{
+    font-size: 15px;
+    grid-area: lng;
+}
 /* --------------js-------------- */
 .scroll-down header{
     transform: translate3d(0, -100%, 0);
