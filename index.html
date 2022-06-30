@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- nav menu -->
-    <nav class="navbar navbar-expand-lg bg-light navbar-light navBar">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light  navBar">
         <div class="container">
             <!-- <a href="#" class="navbar-brand navLogoMain"><img class=" w-50"  src="img/nav-logo.svg" alt=""></a> -->
             <img class="navBarLogo" src="img/nav-logo.svg">
@@ -205,7 +205,7 @@
 <section class="signUpForm">
     <div class="container d-md-flex">
         
-        <div><img src="img/form-img.png"></div>
+        <div><img class=" w-100 pt-5 pt-sm-0 d-none d-sm-block" src="img/form-img.png"></div>
         <div>
             <ul class="formList">
                 <li><h1  class=" p3head text-start">Love the Web</h1></li>
@@ -290,87 +290,157 @@
 <footer  class="bg-black ">
     <div class="container">
         <div><img  class="footer-logo  py-5 p-sm-4" src="img/footer-logo.svg" alt=""></div>
-        <div class="footerGrid">
-            <div class="footerText" >
-                <ul class="footerText">
-                    <li ><h5>Company</h5></li>
-                    <li >Mozilla Manifesto</li>
-                    <li>Press Centre</li>
-                    <li>Corporate Blog</li>
-                    <li>Careers</li>
-                    <li>Contact</li>
-                    <li>Donate</li>
-                </ul>
-            </div>
-            <div class="footerText">
-                <ul>
-                    <li><h5>Resources</h5></li>
-                    <li>Privacy Hub</li>
-                    <li>Browser Comparison</li>
-                    <li>Brand Standards</li>
-                </ul>
-            </div>
-            <div class="footerText">
-                <ul>
-                    <li><h5>Support</h5></li>
-                    <li>Product Help</li>
-                    <li>File a Bug</li>
-                </ul>
-            </div>
-            <div class="footerText">
-                <ul>
-                    <li><h5>Developers</h5></li>
-                    <li>Developer Edition</li>
-                    <li>Beta</li>
-                    <li>Beta for Android</li>
-                    <li>Nightly</li>
-                    <li>Nightly for Android</li>
-                    <li>Enterprise</li>
-                    <li>Tools</li>
-                </ul>
-            </div>
-            <div>
-                <div class="socialFlex">
-            
-                         <div>Follow @Mozilla
-                         <ul class="mzp-c-footer-links-social footersocial">
-                            <li><a class="twitter" href="https://twitter.com/mozilla"><img class="socialLinks" src="img/ico/twittwr2.png"></a></li>
-                            <li><a class="twitter" href="https://instagram.com/mozilla/"><img class="socialLinks" src="img/ico/insta black.png"></a></li>
-                            <li><a class="twitter" href="https://youtube.com/mozilla"><img class="socialLinks" src="img/ico/youtube black.png"></a></li>
-                            <li><a class="twitter" href="https://spotify.com/mozilla"><img class="socialLinks" src="img/ico/spotify.png"></a></li>
-                            <li><a class="twitter" href="https://tiktok.com/mozilla"><img class="socialLinks" src="img/ico/tiktok.png"></a></li>                           
-                          </ul></div>
+        <!-- ===========================================footer drop down================================ -->
+        <div class="d-sm-none footerGrid-smllDiv text-light ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Company"><span class="text-light">Company</span></button>
+            <ul class="footerText" id="Company">
+                <li >Mozilla Manifesto</li>
+                <li>Press Centre</li>
+                <li>Corporate Blog</li>
+                <li>Careers</li>
+                <li>Contact</li>
+                <li>Donate</li>
+            </ul>
+            <hr>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Resources"><span class="text-light">Resources</span></button>
+            <ul class="footerText" id="Resources">
+                <li >Mozilla Manifesto</li>
+                <li>Press Centre</li>
+                <li>Corporate Blog</li>
+                <li>Careers</li>
+                <li>Contact</li>
+                <li>Donate</li>
+            </ul>
+            <hr>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Support"><span class="text-light">Support</span></button>
+            <ul class="footerText" id="Support">
+                <li >Mozilla Manifesto</li>
+                <li>Press Centre</li>
+                <li>Corporate Blog</li>
+                <li>Careers</li>
+                <li>Contact</li>
+                <li>Donate</li>
+            </ul>
+            <hr>
 
-                        <div>
-                            Follow @Firefox
-                            <ul class="mzp-c-footer-links-social footersocial">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Developers"><span class="text-light">Developers</span></button>
+            <ul class="footerText" id="Developers">
+                <li >Mozilla Manifesto</li>
+                <li>Press Centre</li>
+                <li>Corporate Blog</li>
+                <li>Careers</li>
+                <li>Contact</li>
+                <li>Donate</li>
+            </ul>    
+
+
+        </div>
+        
+
+        
+        <div class="d-sm-block d-none">
+            <div class="footerGrid">
+                <div class="footerText" >
+                    <ul class="footerText">
+                        <li ><h5>Company</h5></li>
+                        <li >Mozilla Manifesto</li>
+                        <li>Press Centre</li>
+                        <li>Corporate Blog</li>
+                        <li>Careers</li>
+                        <li>Contact</li>
+                        <li>Donate</li>
+                    </ul>
+                </div>
+                <div class="footerText">
+                    <ul>
+                        <li><h5>Resources</h5></li>
+                        <li>Privacy Hub</li>
+                        <li>Browser Comparison</li>
+                        <li>Brand Standards</li>
+                    </ul>
+                </div>
+                <div class="footerText">
+                    <ul>
+                        <li><h5>Support</h5></li>
+                        <li>Product Help</li>
+                        <li>File a Bug</li>
+                    </ul>
+                </div>
+                <div class="footerText">
+                    <ul>
+                        <li><h5>Developers</h5></li>
+                        <li>Developer Edition</li>
+                        <li>Beta</li>
+                        <li>Beta for Android</li>
+                        <li>Nightly</li>
+                        <li>Nightly for Android</li>
+                        <li>Enterprise</li>
+                        <li>Tools</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="socialFlex">
+                
+                             <div>Follow @Mozilla
+                             <ul class="mzp-c-footer-links-social footersocial">
                                 <li><a class="twitter" href="https://twitter.com/mozilla"><img class="socialLinks" src="img/ico/twittwr2.png"></a></li>
                                 <li><a class="twitter" href="https://instagram.com/mozilla/"><img class="socialLinks" src="img/ico/insta black.png"></a></li>
                                 <li><a class="twitter" href="https://youtube.com/mozilla"><img class="socialLinks" src="img/ico/youtube black.png"></a></li>
-                          
-                              </ul>
-                        </div>
-                       
+                                <li><a class="twitter" href="https://spotify.com/mozilla"><img class="socialLinks" src="img/ico/spotify.png"></a></li>
+                                <li><a class="twitter" href="https://tiktok.com/mozilla"><img class="socialLinks" src="img/ico/tiktok.png"></a></li>                           
+                              </ul></div>
+    
+                            <div>
+                                Follow @Firefox
+                                <ul class="mzp-c-footer-links-social footersocial">
+                                    <li><a class="twitter" href="https://twitter.com/mozilla"><img class="socialLinks" src="img/ico/twittwr2.png"></a></li>
+                                    <li><a class="twitter" href="https://instagram.com/mozilla/"><img class="socialLinks" src="img/ico/insta black.png"></a></li>
+                                    <li><a class="twitter" href="https://youtube.com/mozilla"><img class="socialLinks" src="img/ico/youtube black.png"></a></li>
+                              
+                                  </ul>
+                            </div>
+                           
+                </div>
             </div>
+        </div>  
         </div>
-    </div>
     <hr style="color: #ffffff;">
-    <div class="container footerline">
-        <div class="footer-footerGrid">
+    <div class="container footerline row">
+        <div class="footer-footerGrid col-10 order-sm-1">
             <div class="a">Website Privacy Notice</div>
             <div class="b">Cookies</div>
             <div class="c">Legal</div>
             <div class="d"> Community Participation Guidelines</div>
             <div class="e">Visit Mozilla Corporation’s not-for-profit parent, the Mozilla Foundation.
                 Portions of this content are ©1998–2022 by individual mozilla.org contributors. Content available under a Creative Commons license.</div>
-            <div class="LanguageSelect"><Label>Language</Label>
-                <select class="custom-select form-control" id="Language">
-                    <option selected>English</option>
-                    <option value="1">Malayalam</option>
-                    <option value="2">hindi</option>
-                    <option value="3">Darkfox</option>
-                  </select>
-            </div>
+        </div>
+        <div class="LanguageSelect col order-sm-2"><Label>Language</Label>
+            <select class="custom-select form-control" id="Language">
+                <option selected>English (Canadian)</option>
+                <option value="1">Asturianu</option>
+                <option value="2">Azərbaycanca</option>
+                <option value="2">Беларуская</option>
+                <option value="2">বাংলা</option>
+                <option value="2">Bosanski</option>
+                <option value="2">Català</option>
+                <option value="2">Maya Kaqchikel</option>
+                <option value="2">Čeština</option>
+                <option value="2">Cymraeg</option>
+                <option value="2">Dansk</option>
+                <option value="2">Deutsch</option>
+                <option value="2">Darkfox</option>
+                <option value="2">Dolnoserbšćina</option>
+                <option value="3">Ελληνικά</option>
+                <option value="3">English (Canadian)</option>
+                <option value="3">English (British)</option>
+                <option value="3">English</option>
+                <option value="3">Esperanto</option>
+                <option value="3">မြန်မာဘာသာ</option>
+                <option value="3">हिन्दी (भारत)</option>
+                <option value="3">മലയാളം</option>
+                <option value="3">日本語</option>
+                <option value="3">한국어</option>
+              </select>
         </div>
     </div>
 </footer>

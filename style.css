@@ -1,8 +1,5 @@
 .navBar{
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 9999;
     transition: all 300ms ease-in-out;
     box-shadow:
@@ -35,7 +32,7 @@
 .navGrid{
 display: grid;
 grid-template-columns: repeat(6,minmax(200px,1fr));
-grid-template-areas: "logo navmenu navmenu navmenu spc btn";
+grid-template-areas: "navmenu navmenu navmenu navmenu spc btn";
 }
 
 .navBarLogo{
@@ -241,7 +238,7 @@ table {
 @media(max-width:768px){
     .socialFlex{
         display: grid;
-        grid-template-columns: repeat(2,minmax(15rem,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
         gap: 5rem;  
         font-size: 13px;
     }
@@ -252,12 +249,34 @@ table {
     font-size:13px;
 }
 .footer-footerGrid{
+    
     display: grid;
-    grid-template-columns: minmax(200px,2fr)  minmax(100px,1fr)  minmax(100px,1fr)  minmax(300px,3fr) minmax(200px,3fr)  6fr 3fr;
+    gap: 2rem;  
+    /* grid-template-columns: auto-fit,minmax(200px,2fr)  minmax(100px,1fr)  minmax(100px,1fr)  minmax(300px,3fr) minmax(200px,3fr)  6fr 3fr; */
     grid-template-rows: 1fr 2fr;
     grid-template-areas:"txt1 txt2 txt3 txt4 spc1 spc lng"
                         "txt5 txt5 txt5 txt5 txt5 spc lng";
                         color: aliceblue;
+}
+/* @media(max-width:768px){
+    .footer-footerGri{
+        grid-template-columns: auto-fit,minmax(200px);
+        grid-template-rows: 1fr 2fr 2fr;
+
+       
+        color: aliceblue;
+    }
+} */
+.footer-footerGrid:hover{
+
+}
+.footerGrid-smllDiv{
+    
+display: grid;
+grid-template-rows: auto;  
+}
+.footerGrid-smllDiv ul{
+    text-align: start;
 }
 .a{
     height: 60px;
@@ -286,6 +305,8 @@ table {
     grid-area: txt5;
 }
 .LanguageSelect{
+    height: 60px;
+    width: 100px;
     font-size: 15px;
     grid-area: lng;
 }
